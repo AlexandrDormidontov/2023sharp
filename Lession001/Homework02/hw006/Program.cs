@@ -1,42 +1,20 @@
-﻿//Задача 15:
-//Напишите программу, которая принимает на вход цифру, 
-//обозначающую день недели, и проверяет, 
-//является ли этот день выходным.
-//6 -> да
-//7 -> да
-//1 -> нет
+﻿//Задача 13: 
+//Напишите программу, которая выводит третью
+//цифру заданного числа или сообщает, что третьей цифры нет.
+//645 -> 5
+//78 -> третьей цифры нет
+//32679 -> 6
 
-Console.WriteLine ("Введите день недели от 1 до 7, ");
-int a = Convert.ToInt32(Console.ReadLine());
-   if (a == 6) 
+Console.WriteLine("Введите число: ");
+int number = int.Parse(Console.ReadLine());
+if (number > 99)
 {
-    Console.WriteLine("да");
+    int num = (int)Math.Floor(Math.Log10(number))-2;
+    int num2 = (int)Math.Pow(10, num);
+    Console.WriteLine((number / num2 % 10) % 10);
 }
-    else if (a == 7)
-    {
-        Console.WriteLine("да");
-    }
-    else if (a == 5)
-    {
-        Console.WriteLine ("нет");
-    }
-    else if (a == 4)
-    {
-        Console.WriteLine ("нет");
-    }
-    else if (a == 3)
-    {
-        Console.WriteLine ("нет");
-    }
-    else if (a == 2)
-    {
-        Console.WriteLine ("нет");
-    }
-    else if (a == 1)
-    {
-        Console.WriteLine ("нет");
-    }
 else
 {
-   Console.WriteLine("введеное число не входит в предложеный диапазон"); 
+    Console.WriteLine("Третьей цифры нет");
 }
+
