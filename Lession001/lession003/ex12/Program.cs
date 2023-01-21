@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//Задача №17.
+//Напишите программу, 
+//которая принимает на вход 
+//координаты точки (X и Y), 
+//причем X ≠ 0 и Y ≠ 0 
+//и выдаёт номер четверти плоскости,
+//в которой находится эта точка.
+
+Console.WriteLine("Введите координату Х: ");
+int X = Convert.ToInt32(Console.ReadLine());
