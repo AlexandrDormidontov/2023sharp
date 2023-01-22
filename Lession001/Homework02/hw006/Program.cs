@@ -18,3 +18,16 @@ else
     Console.WriteLine("Третьей цифры нет");
 }
 
+//второй вариант решения задачи
+//Console.WriteLine("Введите число: ");
+//int a = Convert.ToInt32(Console.ReadLine());
+//int e = 10;
+//if (a > 99)
+//{
+//  while (a >999)
+//  {
+//    a = a/e;
+//  }  
+//}
+//result = a% e;
+//Console.WriteLine($"Третье число: {result}");
