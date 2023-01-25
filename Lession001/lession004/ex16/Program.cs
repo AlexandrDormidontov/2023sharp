@@ -18,7 +18,7 @@
 //SayLang("PHP");
 //SayLang("werty");
 
-int NumSum(int numA, int numB)
+int NumSum(int numA, int numB) //формирование метода нахождения суммы 2х чисел
 {
     int result = numA + numB;
     return result;
