@@ -7,4 +7,27 @@
 //в которой находится эта точка.
 
 Console.WriteLine("Введите координату Х: ");
-int X = Convert.ToInt32(Console.ReadLine());
+int x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату y: ");
+int y = Convert.ToInt32(Console.ReadLine());
+
+if (x == 0 || y == 0)
+{
+    Console.WriteLine("определить четверть невозможно");
+}
+else if (x > 0 && y > 0)
+{
+    Console.WriteLine("первая четверть плоскости");
+}
+else if (x > 0 && y < 0)
+{
+    Console.WriteLine("четвертая четверть плоскости");
+}
+else if (x < 0 && y < 0)
+{
+    Console.WriteLine("третья четверть плоскости");
+}
+else if (x < 0 && y < 0)
+{
+    Console.WriteLine("вторая четверть плоскости");
+}
