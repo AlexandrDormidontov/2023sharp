@@ -8,10 +8,26 @@
 
 
 
+//Console.WriteLine("Введите положительное число: ");
+//int N = Convert.ToInt32(Console.ReadLine());
+
+//Console.Write($"{N} ->  ");
+//for (int i = 1; i <= N; i++)
+//{
+//   Console.Write($"{Math.Pow(i, 2)}, ");
+//}
+
+//решение задачт с помощью массива, 
 Console.WriteLine("Введите положительное число: ");
 int N = Convert.ToInt32(Console.ReadLine());
-
-for (int i = 1; i <= N; i++)
+int[] array = new int[N] ;
+for (int i = 0; i < array.Length; i++)
 {
-    Console.WriteLine(Math.Pow(i, 2));
+    array[i] = Convert.ToInt32(Math.Pow((i + 1), 2));
 }
+foreach (var c in array)
+{
+    Console.Write($"{c} ");
+}
+
+
