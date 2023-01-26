@@ -7,13 +7,18 @@
 //A (7,-5); B (1,-1) -> 7,21
 
 Console.WriteLine("Введите координату х1: ");
-double x1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату х2: ");
-double x2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату y1: ");
-double y1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату y2: ");
-double y2 = Convert.ToInt32(Console.ReadLine());
+int x1 = Convert.ToInt32(Console.ReadLine());
 
-double s = Math.Sqrt((Math.Pow(x1 - y1),2) +(Math.Pow(x2 - y2),2));
-Console.WriteLine($"расстояние между точками в 2D плоскости = {s}");
+Console.WriteLine("Введите координату х2: ");
+int x2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите координату y1: ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите координату y2: ");
+int y2 = Convert.ToInt32(Console.ReadLine());
+
+double distance = Math.Sqrt((Math.Pow((x2 - x1), 2)) + (Math.Pow((y2 - y1), 2)));
+Console.WriteLine($"{Math.Round (distance, 3)} такое расстояние между точками в 2D плоскости");
+
+
