@@ -5,8 +5,9 @@
 //4 -> 10
 //8 -> 36
 
-int Sum(int A);
+int Sum(int A)
 {
+    int count = A;
     int sum = 0;
     for (int i = 0; i <= A; i++) 
     {   
