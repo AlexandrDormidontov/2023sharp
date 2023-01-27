@@ -30,7 +30,8 @@
 //int y = NumSum (2,6);
 //Console.WriteLine(y);
 
-int SumNum(int numA, int numB) //описание метода
+int SumNum(int numA, int numB) //описание метода SumNum 
+//(метод всегда начинается с заглавной буквы и желательно чтобы присутствовал глагол)
 {
     if (numA >numB)
     {
