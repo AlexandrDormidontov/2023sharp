@@ -5,3 +5,16 @@
 //78 -> 2
 //89126 -> 5
 
+int Count (int number)
+{
+    int count = 0;
+    while (number > 0)
+    {
+       number = number / 10;
+       count = count + 1; 
+    }  
+    return count;
+}
+Console.Write("Введите число: ");
+int A = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($" {A} -> {Count(A)}");
