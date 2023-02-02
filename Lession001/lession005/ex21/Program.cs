@@ -46,7 +46,7 @@
 //string[] nums = s.Split(' ');
 //foreach (var item in nums)
 //{
- //   Console.WriteLine(item);
+//   Console.WriteLine(item);
 //}
 //на выходе мы увидим столбик из цифр с запятыми
 
@@ -68,21 +68,21 @@
 //}
 // получили массив строк и будем переводить его в массив целых чисел
 
-string s = "1, 2, 3, 4, 5, 6, 7";
+//string s = "1, 2, 3, 4, 5, 6, 7";
 
-string[] nums = s.Split(new char[]{' ', ',', '.'} , StringSplitOptions.RemoveEmptyEntries);
+//string[] nums = s.Split(new char[]{' ', ',', '.'} , StringSplitOptions.RemoveEmptyEntries);
 
-int[] n = nums.Select(Int32.Parse).ToArray();
+//int[] n = nums.Select(Int32.Parse).ToArray();
 
 
-foreach (var item in nums)
-{
-    Console.WriteLine(item);
-}
+//foreach (var item in nums)
+//{
+//    Console.WriteLine(item);
+//}
 
-string s1 = "10 21 35 45 57 68 79";
-int[] num1 = Array.ConvertAll(s1.Split(), int.Parse);//это такая же запись что и выше в оптимизированнном виде
-Console.WriteLine(s1);
+//string s1 = "10 21 35 45 57 68 79";
+//int[] num1 = Array.ConvertAll(s1.Split(), int.Parse);//это такая же запись что и выше в оптимизированнном виде
+//Console.WriteLine(s1);
 //ToArray() метод позволяет изменить последовательность  из одного типа в другой
 //Select это операция позволяет создать какую либо выходную последовательность
 
@@ -92,3 +92,30 @@ Console.WriteLine(s1);
 //Найдите сумму отрицательных и положительных элементов массива.
 //Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] 
 //сумма положительных чисел равна 29, сумма отрицательных равна -20.
+
+int[] num = new int[12];
+int sumpol = 0;
+int sumotr = 0;
+for (int i = 0; i < num.Length; i++)
+{
+    num[i] = new Random().Next(-9, 9);
+
+}
+foreach (var n in num)
+{
+    Console.Write($"{n}  ");
+}
+for (int i = 0; i < num.Length; i++)
+{
+    if (num[i] >= 0)
+    {
+        sumpol = sumpol + num[i];
+    }
+    else
+    {
+        sumotr = sumotr + num[i];
+    }
+}
+Console.WriteLine();
+Console.WriteLine($"сумма положительных чисел {sumpol}");
+Console.Write($"сумма отрицательных чисел {sumotr}");
