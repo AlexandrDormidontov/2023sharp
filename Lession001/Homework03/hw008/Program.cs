@@ -23,3 +23,25 @@ else
 {
 Console.WriteLine("Ошибка ввода: число должно быть пятизначным!"); 
 }
+
+//второй вариант решения через массив, только пятизначное число ЕСТЬ ОШИБКИ!!!!
+
+//Console.WriteLine("введите пятизначное число: ");
+//int N = Convert.ToInt32(Console.ReadLine());
+//int[] nums = new int[5];
+//for (int i = 0; i < nums.Length; i++)
+//{
+//    nums[i] = N % 10;
+//    N /= 10;
+//}
+//if (nums[0] == nums[4] && nums[1] == nums[3])
+//{
+//   Console.WriteLine($"Ваше число: {nums} полиндром" );
+//
+//}
+//Console.WriteLine($"Ваше число: {nums} не полиндром");
+
+
+
+
+
