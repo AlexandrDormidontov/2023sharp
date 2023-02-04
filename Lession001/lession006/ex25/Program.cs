@@ -13,21 +13,12 @@ int b = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите третье число: ");
 int c = Convert.ToInt32(Console.ReadLine());
 
-if (a < b + c)
+if (a < b + c && b < a + c && c < a + b)
 {
-    if (b < a + c)
-    {
-        if (c < a + b)
-        {
-            Console.WriteLine($"треугольник со сторонами {a}, {b}, {c} может существовать");
-        }
-        else
-            {
-                Console.WriteLine($"треугольника со сторонами {a}, {b}, {c} - быть не может");
-            }
-    }
+    Console.WriteLine($"треугольник со сторонами {a}, {b}, {c} может существовать");
 }
 else
 {
     Console.WriteLine($"треугольника со сторонами {a}, {b}, {c} - быть не может");
 }
+   
