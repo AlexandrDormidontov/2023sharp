@@ -2,7 +2,7 @@
 //размера m на n, каждый элемент 
 //в массиве находится 
 //по формуле: Aₘₙ = m+n. 
-//cjplfybt vfccbdf gj ajhВыведите полученный массив на экран.
+//Выведите полученный массив на экран.
 //m = 3, n = 4.
 //0 1 2 3
 //1 2 3 4
@@ -17,7 +17,7 @@ for (int i = 0; i < num.GetLength(0); i++)
 {
     for (int j = 0; j < num.GetLength(1); j++)
     {
-        num[i, j] = new Random().Next(1, 10);
+        num[i, j] = i + j;
         Console.Write($"{num[i, j]} ");
     }
     Console.WriteLine();
