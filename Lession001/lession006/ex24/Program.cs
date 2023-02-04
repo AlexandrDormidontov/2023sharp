@@ -47,17 +47,33 @@
 //на первом месте, а первый - на последнем и т.д.)
 //[1 2 3 4 5] -> [5 4 3 2 1]
 //[6 7 3 6] -> [6 3 7 6]
+// вариант 1
+//int [] arr = {1,2,3,4,5}; //создаем массив
 
-int [] arr = {1,2,3,4,5}; //создаем массив
+//for (int i = 0; i < arr.Length / 2; i++)  //делим массив пополам и меняем местами
+//{   
+//    (arr[i], arr[arr.Length-i -1]) = (arr[arr.Length-i-1], arr[i]);
+//    Console.WriteLine($"{arr[i]}");
+//}
+//for (int i = arr.Length / 2; i < arr.Length; i++)
+//{   
+//    Console.Write($"{arr[i]}");
+//}
 
-for (int i = 0; i < arr.Length / 2; i++)  //делим массив пополам и меняем местами
-{   
-    (arr[i], arr[arr.Length-i -1]) = (arr[arr.Length-i-1], arr[i]);
-    Console.WriteLine($"{arr[i]}");
+//вариант 2 (делим массив на пополам и вводим третью переменную)
+int[] arr = { 1, 2, 3, 4 }; //создаем массив
+int temp;  //вводим третью переменную
+int j = arr.Length - 1;
+for (int i = 0; i < arr.Length / 2; i++) //делим массив
+{
+    temp = arr[j];
+   arr[j] = arr[i];
+   arr[i] = temp;
+   j = j - 1;
 }
-for (int i = arr.Length / 2; i < arr.Length; i++)
-{   
-    Console.WriteLine($"{arr[i]}");
+foreach (var item in arr)
+{
+  Console.Write($"{item}, ");  
 }
 
 
