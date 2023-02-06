@@ -1,19 +1,23 @@
-﻿// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+﻿// Задача 50. Напишите программу, 
+//которая на вход принимает позиции 
+//элемента в двумерном массиве, и 
+//возвращает значение этого элемента 
+//или же указание, что такого элемента нет.
 // Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
 // 17 -> такого числа в массиве нет
 
-int rows = ReadInt("Введите индекс строки: ");
-int colums = ReadInt("Введите индекс столбца: ");
+int rows = ReadInt("Введите номер элемента в строке: ");
+int colums = ReadInt("Введите номер элемента в столбце: ");
 int[,] numbers = new int[3, 4];
 FillArray2D(numbers);
 PrintArray2D(numbers);
 
 if (rows < numbers.GetLength(0) && colums < numbers.GetLength(1)) 
-Console.WriteLine(numbers[rows, colums]);
-else Console.WriteLine($"{rows}{colums} -> такого числа в массиве нет");
+Console.WriteLine($"в обозначенном индексе число {numbers[rows, colums]}");
+else Console.WriteLine($"{rows}, {colums} -> такого индекса в массиве нет");
 
 void FillArray2D(int[,] array)
 {
