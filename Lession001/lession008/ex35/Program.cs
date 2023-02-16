@@ -3,31 +3,99 @@
 //строки на столбцы. В случае, 
 //если это невозможно, программа 
 //должна вывести сообщение для пользователя.
-int lines = new Random().Next(2, 5);
-int columns = new Random().Next(2, 5);
-int arrayLastLine = GetLength(1)-1;
-PrintArray(lines, columns);
 
-int[,] array = new int[lines, columns];
-if (array.GetLength(0)==array.GetLength(1))
+Console.WriteLine("Введите количество строк в массиве:  ");
+int lines = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов в массиве:  ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Random arr = new Random();
+int[,] array = new int[arr.Next(1, 10), arr.Next(1, 10)];
+
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+        }
+       
+    }
+}
+ Console.WriteLine();
+
+/*
+int lines = new Random().Next(1, lines);
+int columns = new Random().Next(1, columns);
+int[,] array = new int[3, 4];
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        array[i, j] = new Random().Next(0, 10);
+        Console.Write($"{array[i, j]} ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+
+//int[,] array = new int[lines, columns];
+if (array.GetLength(0) == array.GetLength(1))
 {
     for (int i = 1; i < array.GetLength(0); i++)
     {
         for (int j = 1; j < array.GetLength(1); j++)
         {
-        if (j == array.GetLength(1)-1)
-        {
-            int temp = array [i, j];
-            array[i, j] = array[j,i];
-            array[j,i] = temp;
-        }
+            if (j == array.GetLength(1) - 1)
+            {
+                int temp = array[i, j];
+                array[i, j] = array[j, i];
+                array[j, i] = temp;
+                
+            }
         }
     }
-    PrintArray(lines, columns);
+    Console.WriteLine();
 }
 Console.WriteLine("Поменять строки и столбцы невозможно");
+*/
 
 
+
+
+
+/*
+Console.WriteLine("Введите количество строк в массиве:  ");
+int lines = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов в массиве:  ");
+int columns = Convert.ToInt32(Console.ReadLine());
+
+int lines = new Random().Next(1, 10);
+int columns = new Random().Next(1, 10);
+
+//int arrayLastLine = GetLength(1) - 1;
+//PrintArray(lines, columns);
+
+int[,] array = new int[lines, columns];
+if (array.GetLength(0) == array.GetLength(1))
+{
+    for (int i = 1; i < array.GetLength(0); i++)
+    {
+        for (int j = 1; j < array.GetLength(1); j++)
+        {
+            if (j == array.GetLength(1) - 1)
+            {
+                int temp = array[i, j];
+                array[i, j] = array[j, i];
+                array[j, i] = temp;
+                
+            }
+        }
+    }
+    //Console.WriteLine(lines, columns);
+}
+Console.WriteLine("Поменять строки и столбцы невозможно");
+*/
 //Задача 57: Составить частотный 
 //словарь элементов двумерного массива. 
 //Частотный словарь содержит информацию 
